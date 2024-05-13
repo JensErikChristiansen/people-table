@@ -1,21 +1,13 @@
-import { fetchPeople } from "./actions";
+import { Suspense } from "react";
 import People from "./People";
 
 export default async function Home() {
-  const rawData = await fetchPeople();
-
-  const people = rawData.map(({ name, location }) => ({
-    name: `${name.title} ${name.first} ${name.last}`,
-    street: `${location.street.number} ${location.street.name}`,
-    city: location.city,
-    state: location.state,
-    country: location.country,
-    postcode: location.postcode.toString(),
-  }));
-
   return (
     <>
-      <People people={people} />
+      <h1>People</h1>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <People />
+      </Suspense>
     </>
   );
 }
