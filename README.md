@@ -1,9 +1,5 @@
 My take on https://youtu.be/6s0OVdoo4Q4?si=6iKr8KZtrZjy_irs
 
-I didn't factor out much stuff because I just wanted to have everything (mostly) in one place for future referencing.
-
-Also, I pretty much ignore NextJS's features to literally keep almost everything in one file.
-
 ## Getting Started
 
 First, run the development server:
