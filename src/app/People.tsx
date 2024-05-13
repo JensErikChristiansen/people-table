@@ -34,11 +34,12 @@ export default function People({ people }: ComponentProps) {
   });
 
   const list = people
-    .filter((p) => {
-      return Object.values(p).some((val) =>
-        val.toLowerCase().includes(query.toLowerCase())
-      );
-    })
+    .filter((p) =>
+      Object.values(p)
+        .join(" ")
+        .toLowerCase()
+        .includes(query.replace(",", "").toLowerCase())
+    )
     .toSorted((a, b) => {
       if (sortMethod.direction === SortDirection.DEFAULT) {
         return 0;
