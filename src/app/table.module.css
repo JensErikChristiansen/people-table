@@ -1,0 +1,20 @@
+.header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort {
+  transition: all 200ms;
+}
+
+.sortAsc {
+  transform: rotateZ(180deg);
+}
+
+.sortDesc {
+}
+
+.sortDef {
+  transform: rotateZ(-90deg);
+}
