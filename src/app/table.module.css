@@ -15,6 +15,6 @@
 .sortDesc {
 }
 
-.sortDef {
+.sortDefault {
   transform: rotateZ(-90deg);
 }
